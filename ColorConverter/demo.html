@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My color Converter</title>
+  <script src="https://kit.fontawesome.com/702a669f9c.js" crossorigin="anonymous"></script>
+  <style>
+    *{
+      font-family: 'Gadugi';
+    }
+
+    h1{
+      text-align: center;
+    }
+    
+    body{
+      color:white;
+      background-color: black;
+    }
+
+    .convert, #clear, #clear2{
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 6px;
+      width: 100px;
+      border-radius:5px ;
+      display: flex;
+      margin:20px  auto;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    button{
+      cursor: pointer;
+    }
+
+    #switch{
+      padding: 6px;
+      background-color: white;
+      width: 50px;
+      margin-top: -10px;
+      margin-left: 40px;
+      border: none;
+      display: flex;
+      justify-content:center;
+      margin: auto;
+    }
+
+    input{
+      color:black;
+    }
+
+    #toRGB{
+      display: none;
+    }
+
+    #toHex{
+      display: block;
+      /* display: none; */
+    }
+  </style>
+</head>
+<body>
+  <div id="title">
+    <h1 style="margin-top: 40px;">RGB to Hex Color Converter</h1> 
+  </div>
+  <span><button id="switch" ><i class="fa-solid fa-repeat"></i></button></span>
+  <div id="toHex">
+    Enter the RGB color <br><br>
+    Red (R) &nbsp; &nbsp; &nbsp;: &nbsp; <input type="number" placeholder="0" id="red"> <br> <br>
+    Green (G) &nbsp; : &nbsp; <input type="number"  placeholder="0" id="green" > <br> <br>
+    Blue (B) &nbsp; &nbsp; &nbsp; : &nbsp; <input type="number"  placeholder="0" id="blue"> <br> <br>
+    <button type="button" class="convert convertHex">Convert</button>
+    <button id="clear">Clear</button>
+     <h1 id="hex-color"></h1>
+  </div>
+  <div id="toRGB">
+    Enter the Hex color : Don't put the hash<br><br>
+    Hex Color &nbsp; &nbsp; &nbsp;: &nbsp; <input type="text" placeholder="0" id="hex"> <br> <br>
+    <button type="button" class="convert convertRGB">Convert</button>
+    <button id="clear2">Clear</button>
+     <h1 id="rgb-color"></h1>
+  </div>
+  <script src="colorConverter.js"></script>
+
+</body>
+</html>
